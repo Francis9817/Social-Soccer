@@ -1,7 +1,8 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
-const pool = require('../database');
+const pool = require('../config/database');
+const orm = require('../config/dataBase.orm');
 const helpers = require('./helpers');
 
 passport.use('local.signin', new LocalStrategy({

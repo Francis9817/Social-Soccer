@@ -1,11 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const pool = require('../database');
+const getListMatches = require('../controllers/matches.controller').getListMatches;
 
-router.get('/list-matches', (req, res) => {
-    res.render('pages/matches/list-matches');
-});
+
+const pool = require('../config/database');
+
+
+router.get('/list-matches', getListMatches);
+
 
 router.get('/list-players-team-matches', (req, res) =>{
     res.render('pages/matches/list-players-team-matches')

@@ -16,7 +16,7 @@ const app = express();
 require('./lib/passport');
 
 // Settings
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3500);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
   defaultLayout: 'main',
@@ -41,7 +41,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(validator());
+//app.use(validator());
 
 // Global variables
 app.use((req, res, next) => {
