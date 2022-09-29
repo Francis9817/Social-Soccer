@@ -1,27 +1,29 @@
-const users =(sequelize, type) =>{
-    return sequelize.define('users', {
+const stadiums = (sequelize, type) => {
+    return sequelize.define('stadiums', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        username: type.STRING(99),
-        password: type.STRING,
-        fullname: type.STRING(99),
-       
-        createUsers:{
+
+        name: type.STRING,
+        price: type.STRING,
+        ability: type.STRING,
+        location: type.STRING,
+
+        createTeams: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updateUsers:{
+        updateTeams: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },{
+    }, {
         timestamps: false,
     })
 }
 
-module.exports = users
+module.exports = stadiums

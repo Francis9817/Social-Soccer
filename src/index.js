@@ -41,7 +41,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-//app.use(validator());
+app.use(validator());
 
 // Global variables
 app.use((req, res, next) => {
@@ -54,7 +54,8 @@ app.use((req, res, next) => {
 // Routes
 app.use(require('./routes/index'));
 app.use(require('./routes/authentication'));
-app.use('/matches', require('./routes/matches.routes'));
+app.use('/matches', require('./routes/matches.routers'));
+app.use('/stadiums', require('./routes/stadiums.routers'));
 
 
 // Public
