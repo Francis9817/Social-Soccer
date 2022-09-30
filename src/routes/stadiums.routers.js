@@ -14,7 +14,7 @@ router.get('/list-stadiums', async (req, res) =>{
 router.get('/delete-stadiums/:id', stadiumsController.deleteStadium);
 
 //editar
-
-
+router.get('/edit-stadiums/:id', stadiumsController.getStadium);
+router.post('/edit-stadiums/:id', stadiumsController.updateStadium);
 
 module.exports = router;

@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each matches}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card text-uppercase">
+                        {{team_name1}}
+                    </h3>
+                    <p class="m-2">{{team_name2 }}</p>
+                    <p class="m-2">{{type_championship}}</p>
+                    <p class="m-2">{{referee_name }}</p>
+                    <p class="m-2">{{start_time }}</p>
+                    <p class="m-2">{{end_time}}</p>
+                    <p class="m-2">{{place}}</p>
+                    <a href="/matches/delete-matches/{{id}}" class="btn btn-danger">Eliminar</a>
+                    <a href="/matches/edit-matches/{{id}}" class="btn btn-secondary">Editar</a>
+
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay registro guardados a un </p>
+                <a href="/matches"> Agrega uno haciendo click aqui </a>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

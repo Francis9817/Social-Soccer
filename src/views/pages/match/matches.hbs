@@ -1,0 +1,47 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="card-body">
+                    <form action="/matches/match" method="POST">
+                    <h5 class="mt-3">Nombre del Equipo 1</h5>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="team_name1" placeholder="Nombre del Jugador" autofocus>
+                        </div>
+                        <h5 class="mt-3">Nombre del Equipo 2</h5>
+                        <div class="form-grou">
+                            <input type="text" name="team_name2" class="form-control"
+                                placeholder="Nombre del Equipo">
+                        </div>
+                        <h5 class="mt-3">Tipo de campeonato</h5>
+                        <div class="form-grou">
+                            <input type="text" name="type_championship" class="form-control" placeholder="Tipo de campeonato">
+                        </div>
+                        <h5 class="mt-3">Nombre del Arbitro</h5>
+                        <div class="form-grou">
+                            <input type="text" name="referee_name" class="form-control" placeholder="Nombre del Arbitro">
+                        </div>
+                        <h5 class="mt-3">Hora Inicio</h5>
+                        <div class="form-grou">
+                            <input type="text" name="start_time" class="form-control" placeholder="Hora Inicio">
+                        </div>
+                        <h5 class="mt-3">Hora Fin</h5>
+                        <div class="form-grou">
+                            <input type="text" name="end_time" class="form-control" placeholder="Hora Fin">
+                        </div>
+                        <h5 class="mt-3">Lugar</h5>
+                        <div class="form-grou">
+                            <input type="text" name="place" class="form-control" placeholder="Lugar ">
+                        </div>
+                        <h5 class="mt-3">Fecha del partido</h5>
+                        <input type="date" name="date" class="form-control" placeholder="Fecha del partido ">
+
+                        <div class="form-group mt-3 d-grid">
+                            <button  type="submit" class="btn btn-success btn-block"> Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
