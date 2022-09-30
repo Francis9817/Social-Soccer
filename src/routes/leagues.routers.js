@@ -3,12 +3,12 @@ const router = express.Router();
 const leaguesController = require('../controllers/leagues.controller');
 const pool = require("../config/database");
 
-router.get("/", leaguesController.getListLeagues);
-router.post("/league",leaguesController.postLeagues);
+router.get('/', leaguesController.getListLeagues);
+router.post('/league',leaguesController.postLeagues);
 
 //mostrar las listas
 router.get('/list-leagues', async (req, res) =>{
-    const teams = await pool.query('SELECT * FROM  leagues');
+    const leagues = await pool.query('SELECT * FROM  leagues');
     res.render('pages/league/list-leagues', {leagues})
 });
 

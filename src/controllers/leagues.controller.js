@@ -29,8 +29,8 @@ Leagues.deleteLeague = async (req, res) =>{
 
 Leagues.getleague = async (req, res) => {
     const{ id } = req.params;
-    const team = await pool.query('SELECT * FORM leagues WHERE id =?', [id]);
-    res.render('pages/league/edit-leagues',{team: team[0]});
+    const league = await pool.query('SELECT * FORM leagues WHERE id =?', [id]);
+    res.render('pages/league/edit-leagues',{league: league[0]});
 
 };
 
