@@ -1,0 +1,26 @@
+<div class="row">
+    {{#each leagues}}
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h3 class="card text-uppercase">
+                    {{boss}}
+                </h3>
+                <p class="m-2">{{category}}</p>
+                <p class="m-2">{{number_teams}}</p>
+                <p class="m-2">{{city}}</p>
+                <a href="/leagues/delete-leagues/{{id}}" class="btn btn-danger">Eliminar</a>
+                <a href="/leagues/edit-leagues/{{id}}" class="btn btn-secondary">Editar</a>
+
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+            <p>No hay registro guardados a un </p>
+            <a href="/leagues"> Agrega uno haciendo click aqui</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -6,9 +6,9 @@ const leagues = (sequelize, type) => {
             autoIncrement: true,
         },
 
-        number_teams: type.STRING,
+        boss: type.STRING,
         category: type.STRING,
-        President: type.STRING,
+        number_teams: type.STRING,
         city: type.STRING,
         
         createTeams: {

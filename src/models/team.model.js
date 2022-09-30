@@ -6,10 +6,10 @@ const teams = (sequelize, type) => {
             autoIncrement: true,
         },
 
-        team_name: type.STRING,
-        date_foundation: type.STRING,
-        President: type.STRING,
+        squad: type.STRING,
+        boss: type.STRING,
         category: type.STRING,
+        foundation: type.STRING,
         
         createTeams: {
             type: 'TIMESTAMP',
