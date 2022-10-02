@@ -1,62 +1,105 @@
-<div class="container p-4">
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card ">
-                <div class="card-body">
-                    <form action="/matches/edit-matches/{{match.id}}" method="POST">
-                        <div class="form-group">
-                            <h5 class="mt-3">Nombre del Equipo 1</h5>
-                            <input type="text" value="{{match.team_name1}}" class="form-control" name="team_name1"
-                                placeholder="team_name1" autofocus>
-                        </div>
-                        <div class="form-group">
-                            <h5 class="mt-3">Nombre del Equipo 2</h5>
-                            <input type="text" value="{{match.team_name2}}" class="form-control" name="team_name2"
-                                placeholder="Nombre del equipo" autofocus>
-                        </div>
-                        <br>
-                        <div class="form-grou">
-                            <h5 class="mt-3">Tipo de campeonato</h5>
-                            <input type="text" value="{{match.type_championship}}" name="type_championship"
-                                class="form-control" placeholder="tipo de campeonato ">
-                        </div>
-                        <div class="form-grou">
-                            <br>
-                            <h5 class="mt-3">Nombre del Arbitro</h5>
-                            <input type="text" value="{{match.referee_name}}" name="referee_name" class="form-control"
-                                placeholder="Nombre del Arbitro ">
-                        </div>
-                        <br>
-                        <div class="form-grou">
-                            <br>
-                            <h5 class="mt-3">Hora Inicio</h5>
-                            <input type="text" value="{{match.start_time}}" name="start_time" class="form-control"
-                                placeholder="Hora de inicio ">
-                        </div>
-                        <div class="form-grou">
-                            <br>
-                            <h5 class="mt-3">Hora Fin</h5>
-                            <input type="text" value="{{match.end_time}}" name="end_time" class="form-control"
-                                placeholder="Hora Fin ">
-                        </div>
-                        <div class="form-grou">
-                            <br>
-                            <h5 class="mt-3">lugar</h5>
-                            <input type="text" value="{{match.place}}" name="place" class="form-control"
-                                placeholder="lugar ">
-                        </div>
-                        <br>
-                        <h5 class="mt-3">Fecha del partido</h5>
-                        <input type="date" value="{{match.date}}" name="date" class="form-control"
-                            placeholder="Fecha del partido ">
+
+<link rel="stylesheet" href="/css/forms.css">
 
 
-                        <div class="form-group mt-3 d-grid">
-                            <button type="submit" class="btn btn-success btn-block"> Guardar</button>
+<div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+    <div class="loginbackground box-background--white padding-top--64">
+        <div class="loginbackground-gridContainer">
+            <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+                <div class="box-root"
+                    style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+                </div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+                <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;">
+                </div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+                <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+                <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+                <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+                <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+                <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+                <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+                <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+            <h1><a>Editar Partido</a></h1>
+        </div>
+        <div class="formbg-outer">
+            <div class="formbg">
+                <div class="formbg-inner padding-horizontal--48">
+                    <form action="/matches/edit-matches/{{match.id}}" method="POST" id="stripe-login">
+                        <div class="field padding-bottom--24">
+                            <p>Nombre del Equipo 1</p>
+                            <input type="text" value="{{match.team_name1}}" class="form-control" name="team_name1">
+
+                        </div>
+
+                        <div class="field padding-bottom--24">
+                            <p>Nombre del Equipo 2</p>
+                            <input type="text" value="{{match.team_name2}}" class="form-control" name="team_name2">
+                        </div>
+
+                        <div class="field padding-bottom--24">
+                            <p>Tipo de campeonato</p>
+                            <input type="text" value="{{match.type_championship}}" class="form-control"
+                                name="type_championship">
+                        </div>
+
+                        <div class="field padding-bottom--24">
+                            <p>Nombre del Arbitro</p>
+                            <input type="text" value="{{match.referee_name}}" class="form-control" name="referee_name">
+
+                        </div>
+
+                        <div class="field padding-bottom--24">
+                            <p>Tiempo inicial</p>
+                            <input type="time" value="{{match.start_time}}" class="form-control" name="start_time">
+                        </div>
+
+                        <div class="field padding-bottom--24">
+                            <p>Tiempo Final</p>
+                            <input type="time" value="{{match.end_time}}" class="form-control" name="end_time">
+
+                        </div>
+
+                        <div class="field padding-bottom--24">
+                            <p>Lugar</p>
+                            <input type="text" value="{{match.place}}" class="form-control" name="place">
+
+                        </div>
+
+                        <div class="field padding-bottom--24">
+                            <p>Fecha</p>
+                            <input type="date" value="{{match.date}}" class="form-control" name="date">
+
+                        </div>
+
+                        <div class="field padding-bottom--24">
+                            <input type="submit" name="submit" value="Guardar">
                         </div>
                     </form>
                 </div>
             </div>
+            <br><br>
+
         </div>
     </div>
 </div>
