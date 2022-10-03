@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row">
     <div class="col-md-4 mx-auto">
         <div class="card ">
             <div class="card-body">
@@ -25,5 +25,44 @@
                 </form>
             </div>
         </div>
+    </div>
+</div> --}}
+
+<link rel="stylesheet" href="/css/forms.css">
+
+<div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+    <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+        <h1><a href="/teams" rel="dofollow">Agregar Equipo</a></h1>
+    </div>
+    <div class="formbg-outer">
+        <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+                <form action="/teams/team" method="POST" id="stripe-login">
+                    <div class="field padding-bottom--24">
+                        <p>Nombre del Equipo</p>
+                        <input type="text" class="form-control" name="squad" placeholder="nombre del equipo" autofocus>
+                    </div>
+
+                    <div class="field padding-bottom--24">
+                        <p>Nombre del dueño</p>
+                        <input type="text" class="form-control" name="boss" placeholder="Nombre del dueño del equipo" autofocus>
+                    </div>
+
+                    <div class="field padding-bottom--24">
+                        <p>Categoria</p>
+                        <input type="text" class="form-control" name="category" placeholder="categoria" autofocus>
+                    </div>
+
+                    <div class="field padding-bottom--24">
+                        <p>Fecha de fundacion</p>
+                        <input type="date" class="form-control" name="foundation" placeholder="fecha de fundacion" autofocus>
+                    </div>
+                    <div class="field padding-bottom--24">
+                        <input type="submit" name="submit" value="Guardar">
+                    </div>
+                </form>
+            </div>
+        </div>
+     <br><br>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row">
     {{#each teams}}
     <div class="col-md-3">
         <div class="card text-center">
@@ -20,6 +20,42 @@
         <div class="card card-body text-center">
             <p>No hay registro guardados a un </p>
             <a href="/teams"> Agrega uno haciendo click aqui</a>
+        </div>
+    </div>
+    {{/each}}
+</div> --}}
+
+<link rel="stylesheet" href="/css/cards.css">
+
+
+<div class="container">
+
+    {{#each teams}}
+
+    <div class="card">
+        <div class="box">
+            <div class="content">
+                <h3>Estadio {{squad}}</h3>
+                <p>Nombre del Dueño: {{boss}}</p>
+                <p>Categoria: {{category}}</p>
+                <p>Fecha de fundación: {{foundation}}</p>
+                <a href="/teams/delete-teams/{{id}}" style="background-color: red ; color:aliceblue;"
+                    class="btn btn-danger">Eliminar</a>
+                <a href="/teams/edit-teams/{{id}}" style="background-color: rgb(12, 174, 0) ; color:aliceblue;"
+                    class="btn btn-secondary">Editar</a>
+
+
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="card">
+        <div class="box">
+            <div class="content">
+
+                <p>No hay registro guardados aun </p>
+                <a href="/teams"> Agrega uno haciendo click aqui </a>
+            </div>
         </div>
     </div>
     {{/each}}

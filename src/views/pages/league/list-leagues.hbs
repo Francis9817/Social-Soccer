@@ -1,7 +1,9 @@
+{{!-- <link rel="stylesheet" href="/css/cards.css">
 <div class="row">
     {{#each leagues}}
-    <div class="col-md-3">
-        <div class="card text-center">
+
+    <div class="card">
+        <div class="box">
             <div class="card-body">
                 <h3 class="card text-uppercase">
                     {{boss}}
@@ -9,8 +11,10 @@
                 <p class="m-2">{{category}}</p>
                 <p class="m-2">{{number_teams}}</p>
                 <p class="m-2">{{city}}</p>
-                <a href="/leagues/delete-leagues/{{id}}" class="btn btn-danger">Eliminar</a>
-                <a href="/leagues/edit-leagues/{{id}}" class="btn btn-secondary">Editar</a>
+                <a href="/leagues/delete-leagues/{{id}}" style="background-color: red ; color:aliceblue;"
+                    class="btn btn-danger">Eliminar</a>
+                <a href="/leagues/edit-leagues/{{id}}" style="background-color: rgb(12, 174, 0) ; color:aliceblue;"
+                    class="btn btn-secondary">Editar</a>
 
             </div>
         </div>
@@ -20,6 +24,41 @@
         <div class="card card-body text-center">
             <p>No hay registro guardados a un </p>
             <a href="/leagues"> Agrega uno haciendo click aqui</a>
+        </div>
+    </div>
+    {{/each}}
+</div> --}}
+
+<link rel="stylesheet" href="/css/cards.css">
+
+
+<div class="container">
+
+    {{#each leagues}}
+
+    <div class="card">
+        <div class="box">
+            <div class="content"> 
+                <p>Nombre del presidente: {{boss}}</p>
+                <p>Categoria: {{category}}</p>
+                <p>Numeros de Equipos: {{number_teams }}</p>
+                <p>Ciudad {{city}}</p>
+                <a href="/leagues/delete-leagues/{{id}}" style="background-color: red ; color:aliceblue;"
+                    class="btn btn-danger">Eliminar</a>
+                <a href="/leagues/edit-leagues/{{id}}" style="background-color: rgb(12, 174, 0) ; color:aliceblue;" class="btn btn-secondary">Editar</a>
+
+
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="card">
+        <div class="box">
+            <div class="content">
+
+                <p>No hay registro guardados aun </p>
+                <a href="/leagues"> Agrega uno haciendo click aqui </a>
+            </div>
         </div>
     </div>
     {{/each}}

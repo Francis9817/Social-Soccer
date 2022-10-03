@@ -1,4 +1,4 @@
-<div class="container p-4">
+{{!-- <div class="container p-4">
     <div class="row">
         {{#each stadiums}}
         <div class="col-md-3">
@@ -27,4 +27,39 @@
 
        
     </div>
+</div> --}}
+
+<link rel="stylesheet" href="/css/cards.css">
+
+
+<div class="container">
+
+    {{#each stadiums}}
+
+    <div class="card">
+        <div class="box">
+            <div class="content"> 
+                <h3>Estadio {{name}}</h3>
+                <p>Precio del Estadio: {{price}}</p>
+                <p>Capacidad: {{ability}}</p>
+                <p>Ubicación {{location}}</p>
+                <a href="/stadiums/delete-stadiums/{{id}}" style="background-color: red ; color:aliceblue;"
+                    class="btn btn-danger">Eliminar</a>
+                <a href="/stadiums/edit-stadiums/{{id}}" style="background-color: rgb(12, 174, 0) ; color:aliceblue;" class="btn btn-secondary">Editar</a>
+
+
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="card">
+        <div class="box">
+            <div class="content">
+
+                <p>No hay registro guardados aun </p>
+                <a href="/stadiums"> Agrega uno haciendo click aqui </a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
 </div>

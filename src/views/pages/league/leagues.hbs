@@ -1,37 +1,76 @@
-<div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card ">
-                <div class="card-body">
-                    <form action="/leagues/league" method="POST">
-                        <div class="form-group">
-                            <h5 class="mt-3">Presidente de la Liga barrial</h5>
-                            <input type="text" class="form-control" name="boss" placeholder="Presidente de la Liga barrial"
-                                autofocus>
-                        </div>
+{{!-- <div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card ">
+            <div class="card-body">
+                <form action="/leagues/league" method="POST">
+                    <div class="form-group">
+                        <h5 class="mt-3">Presidente de la Liga barrial</h5>
+                        <input type="text" class="form-control" name="boss" placeholder="Presidente de la Liga barrial"
+                            autofocus>
+                    </div>
+                    <br>
+                    <div class="form-grou">
+                        <h5 class="mt-3">Categoria</h5>
+                        <input type="text" name="category" class="form-control"
+                            placeholder="categoria de la liga barrial">
+                    </div>
+                    <div class="form-grou">
                         <br>
-                        <div class="form-grou">
-                            <h5 class="mt-3">Categoria</h5>
-                            <input type="text" name="category" class="form-control"
-                                placeholder="categoria de la liga barrial">
-                        </div>
-                        <div class="form-grou">
-                            <br>
-                            <h5 class="mt-3">Numeros de Equipos</h5>
-                            <input type="text" name="number_teams" class="form-control"
-                                placeholder="Numeros de Equipos ">
-                        </div>
+                        <h5 class="mt-3">Numeros de Equipos</h5>
+                        <input type="text" name="number_teams" class="form-control" placeholder="Numeros de Equipos ">
+                    </div>
+                    <br>
+                    <div class="form-grou">
                         <br>
-                        <div class="form-grou">
-                            <br>
-                            <h5 class="mt-3">Ciudad</h5>
-                            <input type="text" name="city" class="form-control"
-                                placeholder="ciudad ">
-                        </div>
-                        <div class="form-group mt-3 d-grid">
-                            <button type="submit" class="btn btn-success btn-block"> Guardar</button>
-                        </div>
-                    </form>
-                </div>
+                        <h5 class="mt-3">Ciudad</h5>
+                        <input type="text" name="city" class="form-control" placeholder="ciudad ">
+                    </div>
+                    <div class="form-group mt-3 d-grid">
+                        <button type="submit" class="btn btn-success btn-block"> Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div> --}}
+<link rel="stylesheet" href="/css/forms.css">
+
+<div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+    <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+        <h1><a href="/leagues" rel="dofollow">Agregar ligas Barriales</a></h1>
+    </div>
+    <div class="formbg-outer">
+        <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+                <form action="/leagues/league" method="POST" id="stripe-login">
+                    <div class="field padding-bottom--24">
+                        <p>Presidente de la Liga barrial</p>
+                        <input type="text" class="form-control" name="boss" placeholder="Presidente de la Liga barrial">
+                    </div>
+
+                    <div class="field padding-bottom--24">
+                        <p>Categoria</p>
+                        <input type="text" name="category" class="form-control"
+                            placeholder="categoria de la liga barrial">
+                    </div>
+
+                    <div class="field padding-bottom--24">
+                        <p>Numeros de Equipos</p>
+                        <input type="text" name="number_teams" class="form-control" placeholder="Numeros de Equipos ">
+                    </div>
+
+                    <div class="field padding-bottom--24">
+                        <p>Ciudad</p>
+                        <input type="text" name="city" class="form-control" placeholder="ciudad ">
+
+                    </div>
+                    <div class="field padding-bottom--24">
+                        <input type="submit" name="submit" value="Guardar">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br><br>
+
+    </div>
+</div>
